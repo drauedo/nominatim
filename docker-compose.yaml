@@ -1,0 +1,12 @@
+version: "3.3"
+
+services: 
+    web:
+        build: .
+        ports: 
+            - 9090:9090
+        environment: 
+            PORT: 9090
+            REDIS_URL: redis
+    redis:
+        image: redis:alpine
